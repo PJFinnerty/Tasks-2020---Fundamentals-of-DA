@@ -29,9 +29,9 @@ def unique(list1):
             unique_list.append(x) 
     # print list 
     for x in unique_list: 
-        print (x, ) 
-# driver code 
-list1 = U 
+        print (x, )
+# driver code  
 print("the unique values from user input are:") 
-unique(list1) 
+unique(U)
 
+# print(dict((x,l.count(x)) for x in set(l)) )
