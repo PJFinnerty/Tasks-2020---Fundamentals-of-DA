@@ -1,37 +1,18 @@
-# Peter Finnerty
-
-# Task 1 from Fundamentals of Data Analysis
-
-# October 5th, 2020: Write a Python function called counts that takes a list as
-# input and returns a dictionary of unique items in the list as keys and the number of
-# times each item appears as values. So, the input ['A', 'A', 'B', 'C', 'A']
-# should have output {'A': 3, 'B': 1, 'C': 1} . Your code should not depend
-# on any module from the standard library1 or otherwise. You should research
-# the task first and include a description with references of your algorithm in the
-# notebook.
-
-# Create input function for user and assign to variable 'U'.
-U = input("Enter a list:")
-
-# Reference: Python program to check if two to get unique values from list using traversal.  
-# Example found at https://www.geeksforgeeks.org/python-get-unique-values-list/
-
-# function to get unique values 
-def unique(list1): 
+def CountFrequency(my_list): 
   
-    # intilize a null list 
-    unique_list = [] 
-      
-    # traverse for all elements 
-    for x in list1: 
-        # check if exists in unique_list or not 
-        if x not in unique_list: 
-            unique_list.append(x) 
-    # print list 
-    for x in unique_list: 
-        print (x, )
-# driver code  
-print("the unique values from user input are:") 
-unique(U)
-
-# print(dict((x,l.count(x)) for x in set(l)) )
+    # Creating an empty dictionary  
+    freq = {} 
+    for item in my_list: 
+        if (item in freq): 
+            freq[item] += 1
+        else: 
+            freq[item] = 1
+  
+    for key, value in freq.items(): 
+        print ("% d : % d"%(key, value)) 
+  
+# Driver function 
+if __name__ == "__main__":  
+    my_list =[1, 1, 1, 5, 5, 3, 1, 3, 3, 1, 4, 4, 4, 2, 2, 2, 2] 
+  
+    CountFrequency(my_list) 
