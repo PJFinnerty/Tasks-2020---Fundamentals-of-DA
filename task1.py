@@ -15,4 +15,7 @@ def CountFrequency(my_list):
 if __name__ == "__main__":  
     my_list =[1, 1, 1, 5, 5, 3, 1, 3, 3, 1, 4, 4, 4, 2, 2, 2, 2] 
   
-    CountFrequency(my_list) 
+    CountFrequency(my_list)
+
+
+    
